@@ -1,6 +1,7 @@
 def maxk(a, k):
     n = len(a)
     s = 0
+    mxsum = sum(a[:k])
     for i in range(k, n + 1):                # перебор от к тк мы делаем срез снизу основываясь на этом
         s = sum(a[i - k: i])                 # срез от 0 до i не включительно эл-та (при i =  k)
         if s > mxsum:
